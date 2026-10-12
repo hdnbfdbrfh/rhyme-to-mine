@@ -1,0 +1,31 @@
+name: Build Rhyme to Mine JAR
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v4
+      - name: Install Java 25
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '25'
+      - name: Install Gradle on GitHub runner
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '9.2.1'
+      - name: Build Fabric mod
+        run: gradle build --stacktrace
+      - name: Upload playable mod JAR
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rhyme-to-mine-26.2-jar
+          path: build/libs/rhyme-to-mine-0.1.0.jar
+          if-no-files-found: error
