@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "rhymetomine",
+  "version": "${version}",
+  "name": "Rhyme to Mine",
+  "description": "Say strict rhymes to unlock Minecraft blocks!",
+  "authors": ["Bryan & ChatGPT"],
+  "environment": "*",
+  "entrypoints": {
+    "main": ["dev.bryan.rhymetomine.RhymeToMine"],
+    "client": ["dev.bryan.rhymetomine.RhymeToMineClient"]
+  },
+  "depends": {"fabricloader": ">=0.19.0", "minecraft": "26.2", "java": ">=25", "fabric-api": "*"}
+}

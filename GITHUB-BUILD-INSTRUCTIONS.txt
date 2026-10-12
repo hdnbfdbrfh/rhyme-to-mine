@@ -1,0 +1,18 @@
+BUILD ONLINE — NO GRADLE INSTALL ON YOUR PC
+
+1. Open github.com/new. Sign in and make a new repository named rhyme-to-mine.
+   Select Public or Private. Create repository.
+2. Extract this ZIP, then open the RhymeToMine-26.2 folder.
+3. In your new GitHub repository, choose "uploading an existing file" or Add file > Upload files.
+4. Drag in the project files/folders: .github, src, build.gradle, settings.gradle,
+   gradle.properties, README.md, and GITHUB-BUILD-INSTRUCTIONS.txt.
+   Important: .github/workflows/build.yml MUST be uploaded too.
+5. Commit changes (to the main branch).
+6. Click Actions > Build Rhyme to Mine JAR > Run workflow, if it hasn't started already.
+7. When the run has a GREEN CHECK, open it and click the artifact
+   "rhyme-to-mine-26.2-jar". Extract the downloaded ZIP.
+8. Put the extracted rhyme-to-mine-0.1.0.jar into your Minecraft mods folder.
+
+If the workflow shows a RED X, open the "Build Fabric mod" step and share the error.
+This project has NOT been compiled or verified yet. The speech recognition feature is experimental.
+No GitHub repository or build is created just by having this ZIP.
